@@ -1,13 +1,13 @@
 //크기
-const particleSize = 5;
+const particleSize = 7;
 //간격
-const RESOLUTION = 6;
-const MAX_FORCE = 200;
+const RESOLUTION = 10;
+const MAX_FORCE = 30;
 const MIN_FORCE = 0;
 
 let particles = [];
 
-let imgUrl = '../../src/happiness.png';
+let imgUrl = '../../src/sadness.png';
 let img;
 
 function preload() {
@@ -67,17 +67,17 @@ class Particle {
 
     let totalForce = createVector(0, 0);
 
-    if (distanceToMouse < 100) {
-      let respulsionForce = map(distanceToMouse, 10, 100, MAX_FORCE, MIN_FORCE);
+    if (distanceToMouse < 130) {
+      let respulsionForce = map(distanceToMouse, 0, 130, MAX_FORCE, MIN_FORCE);
       mouseToParticle.setMag(respulsionForce);
       totalForce.add(mouseToParticle);
     }
 
-    if (distanceToMouse > 10) {
+    if (distanceToMouse > 20) {
       let attractionForce = map(
         distanceToTarget,
-        10,
-        100,
+        20,
+        110,
         MIN_FORCE,
         MAX_FORCE
       );
@@ -92,6 +92,6 @@ class Particle {
   draw() {
     fill(this.color);
     noStroke();
-    ellipse(this.x, this.y, particleSize);
+    rect(this.x, this.y, particleSize);
   }
 }

@@ -1,13 +1,13 @@
 //크기
-const particleSize = 18;
+const particleSize = 20;
 //간격
-const RESOLUTION = 18;
-const MAX_FORCE = 50;
+const RESOLUTION = 15;
+const MAX_FORCE = 10;
 const MIN_FORCE = 0;
 
 let particles = [];
 
-let imgUrl = '../../src/angry.png';
+let imgUrl = '../../src/anger.png';
 let img;
 
 function preload() {
