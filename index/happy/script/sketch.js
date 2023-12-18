@@ -1,7 +1,7 @@
 //크기
-const particleSize = 5;
+const particleSize = 10;
 //간격
-const RESOLUTION = 6;
+const RESOLUTION = 12;
 const MAX_FORCE = 200;
 const MIN_FORCE = 0;
 

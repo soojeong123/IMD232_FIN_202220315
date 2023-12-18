@@ -1,8 +1,8 @@
 //크기
-const particleSize = 6;
+const particleSize = 5;
 //간격
-const RESOLUTION = 10;
-const MAX_FORCE = 30;
+const RESOLUTION = 7;
+const MAX_FORCE = 20;
 const MIN_FORCE = 0;
 
 let particles = [];
@@ -67,8 +67,8 @@ class Particle {
 
     let totalForce = createVector(0, 0);
 
-    if (distanceToMouse < 130) {
-      let respulsionForce = map(distanceToMouse, 0, 130, MAX_FORCE, MIN_FORCE);
+    if (distanceToMouse < 120) {
+      let respulsionForce = map(distanceToMouse, 0, 120, MAX_FORCE, MIN_FORCE);
       mouseToParticle.setMag(respulsionForce);
       totalForce.add(mouseToParticle);
     }

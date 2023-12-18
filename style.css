@@ -324,14 +324,19 @@ a:visited {
 
 #a:hover {
   background-color: rgb(139, 0, 0);
+  padding: 10px;
 
   transition: 0.5s ease-out;
 }
 #h:hover {
   background-color: rgb(0, 139, 35);
+  padding: 10px;
+  border-radius: 100px;
   transition: 0.5s ease-out;
 }
 #s:hover {
   background-color: rgb(0, 65, 139);
+  padding: 10px;
+  border-radius: 12px;
   transition: 0.5s ease-out;
 }

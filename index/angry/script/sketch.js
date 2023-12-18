@@ -1,5 +1,5 @@
 //크기
-const particleSize = 20;
+const particleSize = 15;
 //간격
 const RESOLUTION = 10;
 const MAX_FORCE = 10;
@@ -18,6 +18,9 @@ function setup() {
   setCanvasContainer('canvas', 1, 1, true);
   background(0);
   p = spawnParticles();
+
+  fill(255);
+  ellipse(mouseX, mouseY, 5);
 }
 
 function draw() {
